@@ -1,11 +1,20 @@
-serverAddr = "127.0.0.1" # FRP 服务端公网 IP
-serverPort = 7000 # FRP 服务端端口
+serverAddr = "127.0.0.1"       # FRP 服务端公网 IP
+serverPort = 7000              # FRP 服务端端口
 auth.method = "token"
 auth.token = "your_frps_token" # FRP 服务端 Token
 
+# SD-Trainer 服务内网穿透
 [[proxies]]
-name = "application"
+name = "sd-trainer-xxx"
 type = "tcp"
 localIP = "127.0.0.1"
-localPort = 28000 # 要映射的本地端口
-remotePort = 28000 # 要映射的目标端口
+localPort = 28000       # 要映射的本地端口
+remotePort = 28000      # 要映射的目标端口
+
+# ComfyUI 服务内网穿透
+[[proxies]]
+name = "comfyui-xxx"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 8188      # 要映射的本地端口
+remotePort = 8188     # 要映射的目标端口
