@@ -6,6 +6,6 @@ auth.token = "your_frps_token" # FRP 服务端 Token
 [[proxies]]
 name = "application"
 type = "tcp"
-localIP = "application"
+localIP = "127.0.0.1"
 localPort = 28000 # 要映射的本地端口
 remotePort = 28000 # 要映射的目标端口
