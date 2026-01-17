@@ -1,0 +1,11 @@
+serverAddr = "127.0.0.1" # FRP 服务端公网 IP
+serverPort = 7000 # FRP 服务端端口
+auth.method = "token"
+auth.token = "your_frps_token" # FRP 服务端 Token
+
+[[proxies]]
+name = "application"
+type = "tcp"
+localIP = "application"
+localPort = 28000 # 要映射的本地端口
+remotePort = 28000 # 要映射的目标端口
